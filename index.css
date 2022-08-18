@@ -1,11 +1,11 @@
 body {
     display: grid;
     justify-content: center;
-    height: 100%;}
-html {
-    scroll-behavior: smooth;
     height: 100%;
     scroll-snap-type: y mandatory;}
+html {
+    scroll-behavior: smooth;
+    height: 100%;}
 * {
     box-sizing: border-box;
     margin: 0;}
