@@ -2,16 +2,16 @@ body {
     display: grid;
     justify-content: center;
     height: 100%;
-    height: calc(var(--vh, 1vh) * 100);
     background-color: #ACB5A0;
+    height: -webkit-fill-available;
 }
 
 html {
     scroll-behavior: smooth;
     height: 100%;
-    height: calc(var(--vh, 1vh) * 100);
     scroll-snap-type: y mandatory;
     font-family: 'Arima', cursive;
+    height: -webkit-fill-available;
 }
 
 * {
@@ -36,7 +36,7 @@ html {
 header {
     padding: 5px;
     height: 7vh;
-    width: auto;
+    width: 100vw;
     background: #4A675A;
     position: relative;
     scroll-snap-align: center;
@@ -46,7 +46,7 @@ header {
 
 .front {
     height: 93vh;
-    width: auto;
+    width: -webkit-fill-available;
     background: #ACB5A0;
     display: flex;
     justify-content: center;
@@ -57,8 +57,9 @@ header {
 
 .project {
     height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
+    height: -webkit-fill-available;
     width: 100vw;
+    width: -webkit-fill-available;
     background: #D8E1D3;
     scroll-snap-align: center;
     block-size: 100vh;
@@ -72,7 +73,7 @@ header {
 .more_info {
     height: 60vh;
     width: 100vw;
-
+    width: -webkit-fill-available;
     background: #4A675A;
     display: flex;
     justify-content: center;
