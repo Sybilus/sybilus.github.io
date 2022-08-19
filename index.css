@@ -2,7 +2,8 @@ body {
     display: grid;
     justify-content: center;
     height: 100%;
-    background-color: #ACB5A0;
+    width: 100vw;
+    background-color: #4A675A;
     height: -webkit-fill-available;
     position: fixed;
     overflow-y: auto;
@@ -17,6 +18,7 @@ html {
     font-family: 'Arima', cursive;
     height: -webkit-fill-available;
     overflow: scroll;
+    background-color: #4A675A;
 }
 
 * {
@@ -46,18 +48,18 @@ header {
     position: relative;
     scroll-snap-align: center;
     block-size: 7vh;
-    border-radius: 0vh 0vh 30px 30px;
 }
 
 .front {
-    height: 93vh;
-    width: -webkit-fill-available;
+    height: 100vh;
+    width: 100vw;
     background: #ACB5A0;
     display: flex;
     justify-content: center;
     align-items: center;
     vertical-align: middle;
     flex-direction: column;
+    scroll-snap-align: center;
 }
 
 .project {
@@ -76,10 +78,11 @@ header {
 }
 
 .more_info {
-    height: 60vh;
+    min-height: 70vh;
     width: 100vw;
     width: -webkit-fill-available;
     background: #4A675A;
+    scroll-snap-align: start;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,71 +92,72 @@ header {
 }
 
 .bottom_container {
-    height: 33vh;
+    width: 100vw;
     background: #4A675A;
     text-align: center;
     display: flex;
-    justify-content: center;
-    align-items: stretch;
+    font-weight: bold;
+    white-space: normal;
+    flex-wrap: wrap;
+    
 }
 
 .whatiuse {
-    height: auto;
-    width: 70%;
+    height: 30vh;
+    width: auto;
     float: left;
-    margin: 1% 0.5% 1% 1%;
-    background: #ACB5A0;
-    border-radius: 10px;
+    scroll-snap-align: start;
+    background: #4a674f;
     display: flex;
     justify-content: center;
-    align-items: normal;
     flex-direction: column;
-    padding: 3vh 3vw;
+    display: inline-block;
+    transform: scaleX(0.97);
 }
-
-.software_text {
-    height: 30%;
-}
-
 
 
 .contact {
-    width: 30%;
-    float: left;
-    margin: 1% 1% 1% 0.5%;
-    background: #ACB5A0;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    vertical-align: middle;
-    flex-direction: column;
+    height: 30vh;
+    width: auto;
+    scroll-snap-align: start;
+    position: relative;
+    background: #4a674f;
+    transform: scaleX(0.97);
+    display: block;
+text-align:left;
+
+}
+
+.software_text {
+    padding-top: 5%;
 }
 
 footer {
+    position: relative;
     height: 7vh;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     background: #3A4A51;
-    scroll-snap-align: center;
     block-size: 7vh;
+
 }
 
-a {
-    margin: 0 3px 0 3px;
-    background: #ACB5A0;
-    width: 10%;
-    height: 100%;
-    border: 0px;
-    border-radius: 4vh;
-    float: left;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: inherit;
-    font-weight: 500;
+ul{ 
+    margin: 2vh 2vw;
+    list-style-type: none;
+    padding: 0;
+    flex-direction: column;
+    vertical-align: bottom;
 }
+
 
 .contact::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.contact::before {
     content: "";
     clear: both;
     display: table;
@@ -163,7 +167,6 @@ a {
     display: inline-block;
     vertical-align: middle;
     line-height: 8vh;
-    font-weight: bold;
 }
 
 [b] {
@@ -172,10 +175,22 @@ a {
 
 }
 
+
 #email:hover {
     background-color: rgb(150, 163, 144, 0.3);
     border-radius: 40% ;
 }
+/* height of last 2 divs */
+@media screen and (max-width: 768px) {
+    .col-12{height: 45vh;}
+    ul{height: 45vh;
+    }
+    .bottom_container{height: 93vh;}
+    .whatiuse{
+        margin-bottom: 2%;
+    }
+}
+
 
 /* colors
 #3A4A51 
