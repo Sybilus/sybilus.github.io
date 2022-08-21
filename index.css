@@ -50,18 +50,6 @@ header {
     scroll-snap-align: center;
     block-size: 7vh;
 }
-.menu{
-    opacity: 0.75;
-    position: fixed;
-    padding: 1%;
-    top: 0;
-    right: 0;
-    margin-top: 1vh;
-    margin-right: 1vh;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
 
 .front {
     height: 100vh;
@@ -192,7 +180,7 @@ p {
 #email:hover {
     background-color: rgb(150, 163, 144, 0.3);
 }
-/* height of last 2 divs */
+
 @media screen and (max-width: 768px) {
     .col-12{
         height: 45vh; 
@@ -225,91 +213,93 @@ p{
     margin-right: 1%;
 }
 
-/* colors
-#3A4A51 
-#ACB5A0
-#D8E1D3
-#4A675A
-*/
+/* menu stuff */
+
+.sidebar {
+    position: fixed;
+    width: 0vh;
+    height: 100vh;
+    background-color: rgb(255, 0, 0, 0.1);
+    right: 0;
+    opacity: 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sidebar.active {
+    opacity: 1;
+    width: 30vh;
+    transition: width 500ms;
+    transition-timing-function: ease;
+}
+
+.sidebar-button{
+    width: 100%;
+    margin-top: 5%;
+}
+
+
+.menu-button {
+    opacity: 0.75;
+    position: fixed;
+    padding: 1%;
+    top: 0;
+    right: 0;
+    margin-top: 1vh;
+    margin-right: 1vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
 
 /* menu button dont wanna delete thing */
-svg {
-    height: 80px;
-    position: absolute;
-    width: 80px;
+
+
+
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 500ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-.plates {
-    display: flex;
-    flex-wrap: wrap;
-    max-height: 160px;
-    width: 640px;
-}
-
-@media (max-width: 640px) {
-    .plates {
-        width: 320px;
-    }
-}
-
-.plate {
-    height: 80px;
-    width: 80px;
-}
-
-.burger {
-    filter: url(#gooeyness);
-}
-
-.x {
-    transform: scale(0);
-    transition: transform 400ms;
+.hamRotate.active {
+    transform: rotate(45deg);
 }
 
 .line {
     fill: none;
-    stroke: black;
-    stroke-width: 6px;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: #000;
+    stroke-width: 5.5;
     stroke-linecap: round;
-    stroke-linejoin: round;
-    transform-origin: 50%;
-    transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, transform 500ms 200ms;
+}
+.ham7 .top {
+    stroke-dasharray: 40 82;
 }
 
-.x .line {
-    stroke-width: 5.5px;
+.ham7 .middle {
+    stroke-dasharray: 40 111;
 }
 
-.plate1 .line2 {
-    stroke-dasharray: 40 200;
-    stroke-dashoffset: 0px;
+.ham7 .bottom {
+    stroke-dasharray: 40 161;
 }
 
-.plate1 .line3 {
-    stroke-dasharray: 40 179;
-    stroke-dashoffset: 0px;
+.ham7.active .top {
+    stroke-dasharray: 17 82;
+    stroke-dashoffset: -62px;
 }
 
-.active .line {
-    transition: stroke-dasharray 500ms, stroke-dashoffset 500ms, transform 500ms;
+.ham7.active .middle {
+    stroke-dashoffset: 23px;
 }
 
-.active.plate1 .line1 {
-    transform: scale(0, 1);
-    transition: transform 500ms 100ms;
-}
-
-.active.plate1 .line2 {
-    stroke-dasharray: 5px 200;
-    stroke-dashoffset: -164px;
-}
-
-.active.plate1 .line3 {
-    stroke-dasharray: 5px 179;
-    stroke-dashoffset: -142px;
-}
-
-.active .x {
-    transform: scale(1);
-    transition: transform 400ms 350ms;
+.ham7.active .bottom {
+    stroke-dashoffset: -83px;
 }
