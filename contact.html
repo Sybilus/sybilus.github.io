@@ -12,7 +12,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<!-- scroll bar? -->
+<!-- font awesome icons? -->
+<script src="https://kit.fontawesome.com/078c9ac56c.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -20,17 +21,22 @@
 </header>
 <div class="middle-main">
  <div class="middle">
-    <div class="form">
-        <div class="name"><span>name</span></div>
-            <input type="text" name="name" id="name" class="name-input">
-        <div class="name"><span>Email</span></div>
-            <input type="email" name="email" id="email" class="email-input">
-        <div class="name"><span>Message</span></div>
-            <textarea name="message" id="message" class="message" placeholder="Write your message here"></textarea>
+    <form class="form">
+        <label class="name"><span>Name</span></label>
+            <input type="text" name="name" id="name" class="name-input" required></input>
+
+        <label class="name"><span>Email</span></label>
+            <input type="email" name="email" id="email" class="email-input" required>
+
+        <label class="name"><span>Phone number</span></label>
+            <input type="number" name="phone" id="phone" class="phone-input">
+
+        <label class="name"><span>Message</span></label>
+            <textarea name="message" id="message" class="message" placeholder="Write your message here" required></textarea>
         
         <input type="submit" name="submit" id="submit" class="submit" value="Submit">
         
-    </div>
+    </form>
  </div>
 
  </div>

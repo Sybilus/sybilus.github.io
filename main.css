@@ -111,7 +111,7 @@ header {
     transform: scaleX(0.97);
     margin-bottom: 1vh;
     display: table;
-    border-radius: 75px;
+    border-radius: 25px;
 }
 .whatiuse {
     height: 30vh;
@@ -119,7 +119,7 @@ header {
     float: left;
     scroll-snap-align: start;
     background: #4a6567;
-    border-radius: 75px;
+    border-radius: 25px;
     display: table;
     transform: scaleX(0.97);
 }
@@ -154,7 +154,17 @@ ul{
     display: table-cell;
     vertical-align: middle;
 }
-
+.btn-outline-dark{
+    border:none !important;
+    outline: none !important;
+    font-size: 2rem !important;
+    text-transform: capitalize;
+    color: black !important;
+}
+.btn-outline-dark:hover{
+    background-color: rgb(255, 0, 0, 0.3) !important;
+    color: black !important;
+}
 
 .contact::after {
     content: "";
@@ -227,6 +237,7 @@ p{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-image: linear-gradient(rgb(255, 0, 0, 1),rgb(255, 0, 0, 0.7),rgb(255, 0, 0, 0.1), rgb(255, 0, 0, 0));
 }
 
 .sidebar.active {
@@ -253,6 +264,12 @@ p{
     align-items: center;
     display: flex;
     justify-content: center;
+}
+#bottom_fade {
+    z-index: 99;
+    position: fixed;
+    bottom: 0%;
+    background-image: url("bottom-fade.png");
 }
 
 /* menu button dont wanna delete thing */
