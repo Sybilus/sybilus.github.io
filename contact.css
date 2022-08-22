@@ -24,17 +24,20 @@ html {
 * {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
+    border: 0;
 }
 
 /*scrollbar stuff*/
-body {
+* {
     -ms-overflow-style: none;
     /* for Internet Explorer, Edge */
     scrollbar-width: none;
     /* for Firefox */
     overflow-y: scroll;
 }
-body::-webkit-scrollbar {
+
+::-webkit-scrollbar {
     display: none;
     /* for Chrome, Safari, and Opera */
 }
@@ -57,42 +60,76 @@ a:active {
 
 
 /* go back button */
-.goBack{
-    width: 7vh;
-    height: 7vh;
-    border-radius: 50%;
-    background-color: #BCBCBC;
-    position: absolute;
-    bottom: 3vh;
-    right: 3vh;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    color: black;
+text{
+    display: table-cell;
+    font-size: medium;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: 700;
 }
+header > text {
+    font-size:2rem;
+}
+a > text {
+
+    font-size: 1rem;
+}
+.goBack{
+    height: 6vh;
+    width: 6vh;
+    min-width: 35px;
+    min-height: 35px;
+    border-radius: 100%;
+    background-color: #969696;
+    color: black;
+    display: table;
+    margin: 0 auto;
+}
+
 .top {
-    position: relative;
+    position: fixed;
     background-color: #BCBCBC;
-    top:0;
     width: 100%;
     height: 6vh;
+    min-height: 35px;
+    float: left;
+    z-index: 1;
+    display: table;
+    margin: 0 auto;
 }
+
 .middle {
-    position: relative;
     background-color: white;
     width: 100%;
-    height: 88vh;
+    height: 100vh;
+    min-height: 600px;
     display: flex;
     align-items: center;
+    vertical-align: middle;
     justify-content: center;
+    overflow-y: scroll;
 }
+.middle-main{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-y: scroll;
+    position: relative;
+}
+
 /* body for name email message set color to find out */
 .form{
     width:50%;
     height:70%;
+    left: 0;
+    right: 0;
+    position: relative;
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
 }
+
 /* for name email message */
 .name{
     align-self: flex-start;
@@ -100,7 +137,8 @@ a:active {
     color: black;
     background:#BCBCBC;
     width: 30%;
-    height: 7%;
+    height: 5vh;
+    min-height: 30px;
     border-radius: 0 50px 50px 0;
     margin-bottom: 1%;
     padding-left: 1%;
@@ -115,7 +153,8 @@ a:active {
     color: black;
     background: #F8F8F8;
     width: 100%;
-    height: 7%;
+    height: 5vh;
+    min-height: 30px;
     border-radius:50px 0 0 50px;
     margin-bottom: 1%;
     border: none;
@@ -125,13 +164,15 @@ a:active {
     color: black;
     background: #F8F8F8;
     width: 100%;
-    height: 7%;
+    height: 5vh;
+    min-height: 30px;
     border-radius: 50px 0 0 50px;
     margin-bottom: 1%;
     border: none;
 }
 .message {
     height: 57%;
+    min-height: 150px;
     width: 100%;
     background: #F8F8F8;
     margin-bottom: 1%;
@@ -142,7 +183,8 @@ a:active {
 .submit{
     background-color: #BCBCBC;
     width: 35%;
-    height: 7%;
+    height: 5vh;
+    min-height: 30px;
     border-radius: 50px 0 0 50px;
     display: table-cell;
     vertical-align: middle;
@@ -150,14 +192,65 @@ a:active {
     align-self: flex-end;
     font-size: medium;
     border: none;
+    padding-right: 1%;
 }
 input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: #F8F8F8;
 }
 .bottom {
-    position: relative;
+    position: fixed;
     bottom: 0;
     width: 100%;
     height: 6vh;
+    min-height: 35px;
     background-color: #BCBCBC;
+    display: flex;
+align-items: center;
+        display: table-cell;
+
+            vertical-align: middle;
+}
+
+@media screen and (max-width: 1200px) {
+    .form {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .form {
+        width: 55%;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .form {
+        width: 60%;
+    }
+}
+@media screen and (max-width: 900px) {
+    .form {
+        width: 65%;
+    }
+}
+@media screen and (max-width: 800px) {
+    .form {
+        width: 70%;  
+    }
+}
+@media screen and (max-width: 700px) {
+    .form {
+        width: 75%;
+    }
+
+}
+@media screen and (max-width: 600px) {
+    .form{
+        width: 82.5%;
+    }
+
+}
+@media screen and (max-width: 500px) {
+    .form {
+        width: 90%;
+    }
+
 }
