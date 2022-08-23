@@ -246,6 +246,15 @@ p {
         border-radius: 30px;
     }
 }
+@media screen and (max-width: 800px) {
+    * {
+        cursor: default !important;
+    }
+
+    .cursor {
+        display: none !important;
+    }
+}
 
 p{
     font-size: larger;

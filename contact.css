@@ -308,6 +308,13 @@ align-items: center;
     .name {
         width: 50%;
     }
+    * {
+        cursor: default !important;
+    }
+
+    .cursor {
+        display: none !important;
+    }
 }
 @media screen and (max-width: 700px) {
     .form {
