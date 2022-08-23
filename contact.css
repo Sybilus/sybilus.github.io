@@ -272,9 +272,6 @@ align-items: center;
     .form {
         width: 65%;
     }
-    .name {
-        
-    }
 }
 @media screen and (max-width: 800px) {
     .form {
@@ -307,10 +304,6 @@ align-items: center;
     }
     .name {
         width: 100%;
-    }
-    .name-input,
-    .email-input,
-    .phone-input{
     }
     .message{
         border-radius: 0;
