@@ -20,6 +20,10 @@ html {
     height: -webkit-fill-available;
     background-color: white;
 }
+/* cursor */
+* {
+    cursor: url('./Normal\ Select.cur'), none !important;
+}
 
 * {
     box-sizing: border-box;
