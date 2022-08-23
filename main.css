@@ -25,11 +25,38 @@ html {
 * {
     box-sizing: border-box;
     margin: 0;
+    cursor:none !important;
 }
 /* cursor */
-*{
-    cursor: url('./Normal\ Select.cur'), none !important; 
+.cursor {
+    position: fixed;
+    width: 1.1vh;
+    height: 1.1vh;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    pointer-events: none ;
+    mix-blend-mode:difference;
+    z-index: 999;
+    transform: translate(-50%, -50%);
 }
+@keyframes Click {
+    0%{
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(2);;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+.expand {
+    animation: Click .3s;
+}
+/* end of cursor */
+
+
+
 /*scrollbar stuff*/
 .scroll::-webkit-scrollbar {
     display: none;
