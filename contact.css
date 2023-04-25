@@ -5,6 +5,16 @@
     --text: #5cbe12;
 }
 
+
+@font-face {
+    font-family: 'Dune Rise' ;
+    src: url('Dune_Rise.woff2') format('woff2'),
+        url('Dune_Rise.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
     display: grid;
     height: 100vh;
@@ -15,14 +25,14 @@ body {
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Dune Rise', sans-serif ;
     font-size: medium;
 }
 
 html {
     scroll-behavior: smooth;
     height: 100vh;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Dune Rise', sans-serif ;
     height: -webkit-fill-available;
 
 }
