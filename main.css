@@ -229,6 +229,8 @@ header {
     margin-right: 2%;
 }
 
+
+
 footer {
     position: relative;
     bottom: 0;
@@ -502,130 +504,38 @@ p{
 }
 
 
-
-
-
-/* ta od bota */
-.carousel-item > img{
-    background-color: wheat;
-
-}
-
-.project .carousel-container {
-    width: 100%;
-    height: 100%;
+.flicking-viewport {
+    margin-left: auto;
+    margin-right: auto;
+    transition: height .5s;
+    width: 70%;
+    overflow: hidden;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-
-
-.project .carousel-item.active {
-    z-index: 1;
-    transform: scale(1);
-}
-
-.project .carousel-item.prev,
-.project .carousel-item.next {
-    z-index: 0;
-    transform: scale(0.9);
-}
-
-.project .prev,
-.project .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
+.panel {
+    background-color: var(--dark_blue);
+    display: grid;
+    grid-template-rows: 3fr 1fr;
     color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    border: solid 1px rgb(0, 0, 0, 0.2);
+    margin: 1vmin;
+    width: 40vmin;
+
+    aspect-ratio: 1 / 1;
 }
+.imgC{
 
-.project .next::before {
-    content: "";
-    border-top: 8px solid white;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    background-position: center;
+    background-size: cover;
+    margin: 2vmin;
+    border:solid 1px black;
 }
-.project .prev::before {
-    content: "";
-    border-top: 8px solid white;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    position: absolute;
-    top: 50%;
-    left: 50%;
+#panel1{
+        background-image: url("sukcesyimg.png");
 }
-
-.project .next::before {
-    transform: rotate(270deg) translate(20%, -75%);
-}
-.project .prev::before {
-    transform: rotate(90deg) translate(-20%, 115%);
-}
-
-.project .prev{
-    left: 30%;
-}
-.project .next{
-    right: 30%;
-}
-
-
-
-.project .prev:hover,
-.project .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-
-.project .carousel-item {
-    animation: shuffle 1s ease-in-out;
-}
-
-@keyframes shuffle {
-    0% {
-        transform: translateX(0) rotate(0deg);
-    }
-
-    25% {
-        transform: rotate(15deg);
-    }
-
-    50% {
-        transform: rotate(-15deg);
-    }
-
-    75% {
-        transform: rotate(15deg);
-    }
-
-    100% {
-        transform: rotate(0deg);
-    }
-}
-
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
+.textC{
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    margin-bottom: 1vmin;
 }

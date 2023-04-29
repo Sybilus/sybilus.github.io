@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Page</title>
 <!-- my stylesheet -->
+<script src="https://unpkg.com/@egjs/flicking/dist/flicking.pkgd.min.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://unpkg.com/@egjs/flicking/dist/flicking.css" crossorigin="anonymous" />
+
 
 
 <!-- google font -->
@@ -50,7 +53,24 @@
   
     <div id="project" class="project">
 
-        <div class="project_karuzela">
+
+<!-- Viewport element -->
+<div id="flick" class="flicking-viewport">
+  <!-- Camera element -->
+  <div class="flicking-camera">
+    <!-- Panels, class names are your choice -->
+    <div class="panel"><a href="https://sukcesywnauce.pl/" class="imgC" id="panel1"></a><div class="textC">sukcesywnauce</div></div>
+    <div class="panel"><a href="" class="imgC" id="panel2"></a><div class="textC">project 2</div></div>
+    <div class="panel"><a href="" class="imgC" id="panel3"></a><div class="textC">project 3</div></div>
+    <div class="panel"><a href="" class="imgC" id="panel4"></a><div class="textC">project 4</div></div>
+    <div class="panel"><a href="" class="imgC" id="panel5"></a><div class="textC">project 5</div></div>
+
+  </div>
+</div>
+
+
+
+        <!-- <div class="project_karuzela">
           <div class="carousel-container">
             <div class="carousel-item active">
               <img src="image1.jpg" alt="project 1">
@@ -64,7 +84,7 @@
           </div>
           <a class="prev" onclick="plusSlides(-1)"></a>
           <a class="next" onclick="plusSlides(1)"></a>
-        </div>
+        </div> -->
 
       <i class="fa-solid fa-caret-down lilArrow"></i>
     </div>
@@ -127,6 +147,7 @@
 </div>
 
 <script src="./cursor.js"></script>
-<script src="./karousel.js"></script>
+<script src="./carousel.js"></script>
+
   </body>
 </html>
