@@ -17,3 +17,26 @@ function getPanelsPerView() {
 window.addEventListener("resize", () => {
   flicking.setOptions({ panelsPerView: getPanelsPerView() });
 });
+
+const reloadPageOnResize = () => {
+  window.addEventListener("resize", () => {
+    const currentWidth = window.innerWidth;
+    const currentHeight = window.innerHeight;
+    const previousWidth = reloadPageOnResize.previousWidth || 0;
+    const previousHeight = reloadPageOnResize.previousHeight || 0;
+    if (
+      (currentWidth < 768 && previousWidth >= 768) ||
+      (currentWidth >= 768 && previousWidth < 768) ||
+      (currentHeight < 768 && previousHeight >= 768) ||
+      (currentHeight >= 768 && previousHeight < 768) ||
+      (currentWidth < currentHeight && previousWidth >= previousHeight) ||
+      (currentWidth >= currentHeight && previousWidth < previousHeight)
+    ) {
+      location.reload();
+    }
+    reloadPageOnResize.previousWidth = currentWidth;
+    reloadPageOnResize.previousHeight = currentHeight;
+  });
+};
+
+reloadPageOnResize();

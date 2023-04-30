@@ -123,9 +123,11 @@ grid-template-rows: 1fr 1fr;
 .skillsD{
     grid-row: 2 / 3;
     justify-content: center;
+    display: flex;
     align-items: center;
-        font-family: normal !important;
-            font-size: 2.5vmin;
+    font-family: normal !important;
+    font-size: 2.5vmin;
+    transform: scale(1.5);
 }
 .contact{
     grid-column: 2 / 3;
@@ -223,6 +225,7 @@ color: inherit;
     .disappear{
         display: grid;
         grid-template-rows: 1fr 1fr;
+        background: var(--light-blue);
     }
     .skills{
         grid-column: 1/3;
