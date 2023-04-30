@@ -1,12 +1,5 @@
 const disappearSection = document.querySelector('.disappear');
 
-function debounce(func, delay) {
-  let timeoutId;
-  return function() {
-    clearTimeout(timeoutId);
-    timeoutId = setTimeout(() => func.apply(this, arguments), delay);
-  };
-}
 
 function checkScreenSize() {
   if (window.innerWidth >= 600) {
@@ -49,11 +42,14 @@ function checkScreenSize() {
             </div>
         </div>
       `;
-      document.body.appendChild(newSection);
+      // Check if there are any .disappear sections in the document before appending the new one
+      if (!document.querySelector('.disappear')) {
+        document.body.appendChild(newSection);
+      }
     }
   }
 }
 
 // Run checkScreenSize() on load and whenever the window is resized
 window.addEventListener('load', checkScreenSize);
-window.addEventListener('resize', debounce(checkScreenSize, 200));
+window.addEventListener('resize', checkScreenSize);
