@@ -1,0 +1,209 @@
+:root {
+    --base: #a5a8ab;
+    --light-blue: #777d82;
+    --dark_blue: rgb(44, 52, 56);
+    --text: #5cbe12;
+}
+
+@font-face {
+    font-family: 'Dune Rise';
+    src: url('./Dune_Rise.woff2') format('woff2'),
+        url('./Dune_Rise.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    margin: 0;
+    font-family: 'Dune Rise', sans-serif;
+    
+}
+
+#wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+section {
+    box-sizing: border-box;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    padding: 1em;
+}
+
+.front {
+    background: var(--base);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    flex-direction: column;
+    position: relative;
+}
+
+.project {
+    background: var(--light-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    flex-direction: column;
+}
+
+.bottom_container{
+    background-color: var(--base);
+    display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        vertical-align: middle;
+}
+.about{
+    height: 50%;
+    grid-column: 1 / 3;
+    max-width: 50vmax;
+    margin: auto;
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.about >span > p{
+    font-family: normal !important;
+    font-size: 2.5vmin;
+}
+.skills{
+    grid-column: 1 / 2;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+.skillsT{
+    grid-row: 1 / 2;
+}
+.skillsD{
+    grid-row: 2 / 3;
+    justify-content: center;
+    align-items: center;
+        font-family: normal !important;
+            font-size: 2.5vmin;
+}
+.contact{
+    grid-column: 2 / 3;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+.contactT{
+    grid-row: 1 / 2;
+}
+.contactD{
+    grid-row: 2 / 3;
+        font-family: normal !important;
+            font-size: 2.5vmin;
+}
+.contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#linkedIn{
+text-decoration: none;
+color: inherit;
+}
+#linkedIn:hover{
+    border:solid 1px black;
+}
+
+/* karuzela */
+.flicking-viewport {
+    margin-left: auto;
+    margin-right: auto;
+    transition: height .5s;
+    width: 70%;
+    overflow: hidden;
+    position: relative;
+}
+.panel {
+    background-color: var(--dark_blue);
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    color: white;
+    margin: 1vmin;
+    width: 40vmin;
+    aspect-ratio: 1 / 1;
+}
+.imgC {
+    background-position: center;
+    background-size: contain;
+    margin: 2vmin;
+    border: solid 1px black;
+}
+.imgC:hover{
+    background-size: cover;
+}
+#panel1 {
+    background-image: url("sukcesyimg.png");
+}
+
+.textC {
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    margin-bottom: 1vmin;
+}
+
+/* little dots */
+#indicator {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#indicator>div {
+    background-color: black;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#indicator>div.active {
+    transform: scale(1.6);
+}
+/* landing page */
+.hero {
+    display: flex;
+    align-items: center;
+    background-color: #232d3c;
+    color: #fff;
+    padding: 2rem 0;
+    position: relative;
+    text-align: center;
+}
+.hero-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    width: 90%;
+    font-family: normal;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
