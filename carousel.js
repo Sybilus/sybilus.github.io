@@ -7,7 +7,7 @@ const flicking = new Flicking("#flick", {
 });
 
 function getPanelsPerView() {
-  if (window.innerWidth < 768) {
+  if (window.innerWidth < window.innerHeight) {
     return 1; // show 1 panel on screens smaller than 768px
   } else {
     return 3; // show 3 panels on screens larger than or equal to 768px

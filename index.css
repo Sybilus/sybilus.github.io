@@ -253,15 +253,15 @@ color: inherit;
         display: none;
     }
 
-        .bottom_container {
-            background-color: var(--base);
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr;
-            justify-content: center;
-            align-items: center;
-            vertical-align: middle;
-        }
+    .bottom_container {
+        background-color: var(--base);
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        justify-content: center;
+        align-items: center;
+        vertical-align: middle;
+    }
 
     .about{
         margin: auto;
@@ -272,73 +272,70 @@ color: inherit;
         font-size: 1rem;
     }
 
+    .hero {
+        display: flex;
+        align-items: center;
+        background-color: #232d3c;
+        color: #fff;
+        padding: 10px 0;
+        position: relative;
+        text-align: center;
+    }
 
-       
+    .hero-inner {
+        max-width: 960px;
+        margin: 10px auto;
+        width: 90%;
+        font-family: normal;
+    }
 
-        .hero {
-            display: flex;
-            align-items: center;
-            background-color: #232d3c;
-            color: #fff;
-            padding: 10px 0;
-            position: relative;
-            text-align: center;
-        }
+    .hero h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
 
-        .hero-inner {
-            max-width: 960px;
-            margin: 10px auto;
-            width: 90%;
-            font-family: normal;
-        }
-
-        .hero h1 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-        }
+    .hero p {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
 
 
-                .flicking-viewport {
-                    margin: auto;
-                    transition: height .5s;
-                    width: 100%;
-                    overflow: hidden;
-                    position: relative;
-                }
-        
-                .panel {
-                    background-color: var(--dark_blue);
-                    display: grid;
-                    grid-template-rows: 3fr 1fr;
-                    color: white;
-                    margin: 1vmin;
-                    aspect-ratio: 1 / 1;
-                }
-        
-                .imgC {
-                    background-position: center;
-                    background-size: contain;
-                    margin: 2vmin;
-                    border: solid 1px black;
-                }
-        
-                .imgC:hover {
-                    background-size: cover;
-                }
-        
-                #panel1 {
-                    background-image: url("sukcesyimg.png");
-                }
-        
-                .textC {
-                    display: grid;
-                    align-self: center;
-                    justify-self: center;
-                    margin-bottom: 1vmin;
-                }
+    .flicking-viewport {
+        margin: auto;
+        transition: height .5s;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .panel {
+        background-color: var(--dark_blue);
+        display: grid;
+        grid-template-rows: 3fr 1fr;
+        color: white;
+        margin: 1vmin;
+        aspect-ratio: 1 / 1;
+    }
+
+    .imgC {
+        background-position: center;
+        background-size: contain;
+        margin: 2vmin;
+        border: solid 1px black;
+    }
+
+    .imgC:hover {
+        background-size: cover;
+    }
+
+    #panel1 {
+        background-image: url("sukcesyimg.png");
+    }
+
+    .textC {
+        display: grid;
+        align-self: center;
+        justify-self: center;
+        margin-bottom: 1vmin;
+    }
 }
